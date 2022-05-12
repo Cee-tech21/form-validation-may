@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form practice (May)</title>
+    <link rel="stylesheet" href="./assets/bootstrap_5_1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/datatable/datatables.min.css">
+</head>
+
+<body class=" ">
+
+    <main class="min-vh-100 d-flex flex-column align-items-center 
+        bg-light py-5">
+        <section>
+            <nav class="pt-5">
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                        type="button" role="tab" aria-controls="nav-home" aria-selected="true">Enter details</button>
+                    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                        type="button" role="tab" aria-controls="nav-profile" aria-selected="false">View Profile</button>
+                    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
+                        type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
+                </div>
+            </nav>
+            <div class="tab-content container" id="nav-tabContent" style="max-width: 720px;">
+                <div class="tab-pane fade show active " id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <form class="row g-3 " id="profile-form">
+                        <div class="col-md-4">
+                            <label for="first-name-el" class="form-label">First name</label>
+                            <input type="text" class="form-control" id="first-name-el"
+                                name="first_name">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="mid-name-el" class="form-label">Middle name</label>
+                            <input type="text" class="form-control" id="mid-name-el"
+                                name="mid_name">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="last-name-el" class="form-label">Last name</label>
+                            <input type="text" class="form-control" id="last-name-el"
+                                name="last_name">
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="col-md-6">
+                                <label for="dob-el" class="form-label">
+                                    Date of birth</label>
+                                <input type="date" class="form-control" id="dob-el"
+                                    name="dob">
+                            </div>
+                            <div class="form-check col-md-5 d-flex flex-column">
+                                <p>Select Gender</p>
+                                <div>
+                                    <label for="male-el" class="form-check-label pe-5 
+                                        ps-3">Male 
+                                        <input type="radio" class="form-check-input"
+                                            name="gender"></label>
+
+                                    <label for="female-el" class="form-check-label
+                                        ps-3">
+                                        Female 
+                                        <input type="radio" class="form-check-input"
+                                            name="gender">
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="country-el" class="form-label">Country</label>
+                            <input type="text" class="form-control" name="country_el"
+                                id="country-el">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="phone-el" class="form-label">Phone number</label>
+                            <input type="tel" class="form-control" id="phone-el"
+                            name="phone_el">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="state-el" class="form-label">State</label>
+                            <select id="state-el" class="form-select"
+                             name="state_el">
+                                <option selected>Choose...</option>
+                                
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="lg-el" class="form-label">
+                                Local Government</label>
+                            <select id="lg-el" class="form-select" 
+                                name="lg_el">
+                                <option selected>Local Government...</option>
+                            </select>
+                        </div>
+
+
+                        <div class="col-12" >
+                            <button type="submit" class="btn btn-primary"
+                                id="submit-btn">Submit details</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade " id="nav-profile" role="tabpanel" 
+                        aria-labelledby="nav-profile-tab">
+                    <table id="table_id" class="display">
+                        <thead>
+                            <tr>
+                                <th>First name</th>
+                                <th>Middle name</th>
+                                <th>Last name</th>
+                                <th>Date</th>
+                                <th>Sex</th>
+                                <th>Country</th>
+                                <th>Phone</th>
+                                <th>State</th>
+                                <th>Local</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Row 1 Data 2</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Row 2 Data 2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+            </div>
+
+        </section>
+
+
+    </main>
+
+    <section>
+
+
+    </section>
+
+    <script src="./assets/jquery/jquery-3.6.0.min.js"></script>
+
+    <script src="./assets/bootstrap_5_1/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/jquery/jquery.validate.min.js"></script>
+    <script src="./assets/jquery/additional-methods.min.js"></script>
+    <script src="./assets/dom_man.js" type="module"></script>
+    <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+    <script src="./assets/val_and_submit.js"></script>
+    <script src="./assets/datatable/datatables.min.js"></script>
+
+</body>
+
+</html>
