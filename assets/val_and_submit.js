@@ -11,7 +11,7 @@ $('#profile-form').validate({
         dob: {required: true, maxlength: 10},
         gender: 'required',
         country_el: {required: true, minlength: 3},
-        phone_el: {required: true},
+        phone_el: {required: true, digits: true},
         state_el: 'required',
         lg_el: 'required',          
         
